@@ -19,13 +19,13 @@ import lombok.Data;
 
 public class BillTransactionDetail {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name  = "id")
 	private String id;
 	
 	@ManyToOne
 	@JoinColumn(name = "bill_code", referencedColumnName = "bill_code")
-	private MenuType billCode;
+	private BillTransaction billCode;
 	
 	@Column(name = "menu_name")
 	private String menuName;
